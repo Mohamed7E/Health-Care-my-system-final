@@ -1,0 +1,17 @@
+G:\learn\c#\Health\Health\bin\Debug\netcoreapp3.1\Health.exe
+G:\learn\c#\Health\Health\bin\Debug\netcoreapp3.1\Health.deps.json
+G:\learn\c#\Health\Health\bin\Debug\netcoreapp3.1\Health.runtimeconfig.json
+G:\learn\c#\Health\Health\bin\Debug\netcoreapp3.1\Health.runtimeconfig.dev.json
+G:\learn\c#\Health\Health\bin\Debug\netcoreapp3.1\Health.dll
+G:\learn\c#\Health\Health\bin\Debug\netcoreapp3.1\Health.pdb
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.csproj.AssemblyReference.cache
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.Form1.resources
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.Properties.Resources.resources
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.csproj.GenerateResource.cache
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.GeneratedMSBuildEditorConfig.editorconfig
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.AssemblyInfoInputs.cache
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.AssemblyInfo.cs
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.csproj.CoreCompileInputs.cache
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.dll
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.pdb
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.genruntimeconfig.cache
