@@ -34,13 +34,13 @@ namespace Health
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Savebtn = new System.Windows.Forms.Button();
+            this.DeleteBTn = new System.Windows.Forms.Button();
+            this.EditBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TCostTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TNameTb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -102,13 +102,13 @@ namespace Health
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Savebtn);
+            this.groupBox1.Controls.Add(this.DeleteBTn);
+            this.groupBox1.Controls.Add(this.EditBtn);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.TCostTb);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.TNameTb);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(171, 107);
             this.groupBox1.Name = "groupBox1";
@@ -116,44 +116,44 @@ namespace Health
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
-            // button3
+            // Savebtn
             // 
-            this.button3.BackColor = System.Drawing.Color.OrangeRed;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(606, 208);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 41);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Savebtn.BackColor = System.Drawing.Color.OrangeRed;
+            this.Savebtn.FlatAppearance.BorderSize = 0;
+            this.Savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Savebtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Savebtn.Location = new System.Drawing.Point(606, 208);
+            this.Savebtn.Name = "Savebtn";
+            this.Savebtn.Size = new System.Drawing.Size(148, 41);
+            this.Savebtn.TabIndex = 17;
+            this.Savebtn.Text = "Save";
+            this.Savebtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // DeleteBTn
             // 
-            this.button2.BackColor = System.Drawing.Color.OrangeRed;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(606, 271);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 41);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
+            this.DeleteBTn.BackColor = System.Drawing.Color.OrangeRed;
+            this.DeleteBTn.FlatAppearance.BorderSize = 0;
+            this.DeleteBTn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBTn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DeleteBTn.Location = new System.Drawing.Point(606, 271);
+            this.DeleteBTn.Name = "DeleteBTn";
+            this.DeleteBTn.Size = new System.Drawing.Size(148, 41);
+            this.DeleteBTn.TabIndex = 16;
+            this.DeleteBTn.Text = "Delete";
+            this.DeleteBTn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // EditBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(606, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 41);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.EditBtn.BackColor = System.Drawing.Color.OrangeRed;
+            this.EditBtn.FlatAppearance.BorderSize = 0;
+            this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditBtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EditBtn.Location = new System.Drawing.Point(606, 150);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(148, 41);
+            this.EditBtn.TabIndex = 15;
+            this.EditBtn.Text = "Edit";
+            this.EditBtn.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -166,12 +166,12 @@ namespace Health
             this.label8.TabIndex = 8;
             this.label8.Text = "Test cost";
             // 
-            // textBox2
+            // TCostTb
             // 
-            this.textBox2.Location = new System.Drawing.Point(36, 275);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 34);
-            this.textBox2.TabIndex = 7;
+            this.TCostTb.Location = new System.Drawing.Point(36, 275);
+            this.TCostTb.Name = "TCostTb";
+            this.TCostTb.Size = new System.Drawing.Size(213, 34);
+            this.TCostTb.TabIndex = 7;
             // 
             // label7
             // 
@@ -184,12 +184,12 @@ namespace Health
             this.label7.TabIndex = 6;
             this.label7.Text = "Test Name";
             // 
-            // textBox1
+            // TNameTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(36, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 34);
-            this.textBox1.TabIndex = 5;
+            this.TNameTb.Location = new System.Drawing.Point(36, 169);
+            this.TNameTb.Name = "TNameTb";
+            this.TNameTb.Size = new System.Drawing.Size(213, 34);
+            this.TNameTb.TabIndex = 5;
             // 
             // label6
             // 
@@ -389,13 +389,13 @@ namespace Health
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Savebtn;
+        private System.Windows.Forms.Button DeleteBTn;
+        private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TCostTb;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TNameTb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;

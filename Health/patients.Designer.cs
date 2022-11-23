@@ -269,6 +269,7 @@ namespace Health
             this.beletebtn.TabIndex = 16;
             this.beletebtn.Text = "Delete";
             this.beletebtn.UseVisualStyleBackColor = false;
+            this.beletebtn.Click += new System.EventHandler(this.beletebtn_Click);
             // 
             // editbtn
             // 
@@ -282,6 +283,7 @@ namespace Health
             this.editbtn.TabIndex = 15;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = false;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // label12
             // 
@@ -404,6 +406,7 @@ namespace Health
             this.patientslist.RowTemplate.Height = 29;
             this.patientslist.Size = new System.Drawing.Size(1071, 227);
             this.patientslist.TabIndex = 0;
+            this.patientslist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientslist_CellContentClick);
             // 
             // GenCb
             // 
@@ -425,7 +428,7 @@ namespace Health
             this.DOBTb.MaxDate = new System.DateTime(2022, 11, 23, 0, 0, 0, 0);
             this.DOBTb.Name = "DOBTb";
             this.DOBTb.Size = new System.Drawing.Size(213, 34);
-            this.DOBTb.TabIndex = 19;
+            this.DOBTb.TabIndex = 35;
             this.DOBTb.Value = new System.DateTime(2022, 11, 23, 0, 0, 0, 0);
             // 
             // patients
