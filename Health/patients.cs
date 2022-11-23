@@ -120,7 +120,6 @@ namespace Health
                 Query = string.Format(Query, key);
                 Con.setData(Query);
                 Showpatients();
-                Clear();
                 MessageBox.Show("patient Deleteeed!!!");
 
             }

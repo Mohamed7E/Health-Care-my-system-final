@@ -32,7 +32,6 @@ namespace Health
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tests));
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Savebtn = new System.Windows.Forms.Button();
             this.DeleteBTn = new System.Windows.Forms.Button();
@@ -55,8 +54,8 @@ namespace Health
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Testlist = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -65,6 +64,7 @@ namespace Health
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Testlist)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -81,23 +81,12 @@ namespace Health
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.Testlist);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(171, 465);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1077, 278);
             this.panel2.TabIndex = 9;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1071, 227);
-            this.dataGridView1.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -128,6 +117,7 @@ namespace Health
             this.Savebtn.TabIndex = 17;
             this.Savebtn.Text = "Save";
             this.Savebtn.UseVisualStyleBackColor = false;
+            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
             // DeleteBTn
             // 
@@ -141,6 +131,7 @@ namespace Health
             this.DeleteBTn.TabIndex = 16;
             this.DeleteBTn.Text = "Delete";
             this.DeleteBTn.UseVisualStyleBackColor = false;
+            this.DeleteBTn.Click += new System.EventHandler(this.DeleteBTn_Click);
             // 
             // EditBtn
             // 
@@ -154,6 +145,7 @@ namespace Health
             this.EditBtn.TabIndex = 15;
             this.EditBtn.Text = "Edit";
             this.EditBtn.UseVisualStyleBackColor = false;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // label8
             // 
@@ -349,6 +341,18 @@ namespace Health
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
             // 
+            // Testlist
+            // 
+            this.Testlist.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Testlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Testlist.Location = new System.Drawing.Point(3, 48);
+            this.Testlist.Name = "Testlist";
+            this.Testlist.RowHeadersWidth = 51;
+            this.Testlist.RowTemplate.Height = 29;
+            this.Testlist.Size = new System.Drawing.Size(1071, 205);
+            this.Testlist.TabIndex = 8;
+            this.Testlist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Testlist_CellContentClick);
+            // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
@@ -367,7 +371,6 @@ namespace Health
             this.Text = "Tests";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -378,6 +381,7 @@ namespace Health
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Testlist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,7 +391,6 @@ namespace Health
 
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button DeleteBTn;
@@ -410,5 +413,6 @@ namespace Health
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.DataGridView Testlist;
     }
 }
