@@ -16,3 +16,4 @@ G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.dll
 G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.pdb
 G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.genruntimeconfig.cache
 G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.patients.resources
+G:\learn\c#\Health\Health\obj\Debug\netcoreapp3.1\Health.Tests.resources
