@@ -58,7 +58,7 @@ namespace Health
             this.label1.ForeColor = System.Drawing.Color.OrangeRed;
             this.label1.Location = new System.Drawing.Point(486, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 39);
+            this.label1.Size = new System.Drawing.Size(104, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Health";
             // 
