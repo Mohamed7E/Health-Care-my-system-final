@@ -17,7 +17,7 @@ namespace Health
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Disgnosis());
+            Application.Run(new patients());
         }
     }
 }

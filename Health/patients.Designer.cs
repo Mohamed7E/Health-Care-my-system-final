@@ -31,6 +31,8 @@ namespace Health
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(patients));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,26 +44,25 @@ namespace Health
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.savebtn = new System.Windows.Forms.Button();
+            this.beletebtn = new System.Windows.Forms.Button();
+            this.editbtn = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.patAddTb = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.patphoneTb = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.patNameTP = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.patientslist = new System.Windows.Forms.DataGridView();
+            this.GenCb = new System.Windows.Forms.ComboBox();
+            this.DOBTb = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,8 +70,7 @@ namespace Health
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientslist)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,6 +90,27 @@ namespace Health
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(137, 672);
             this.panel1.TabIndex = 0;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.label13.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.label13.Location = new System.Drawing.Point(27, 608);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 28);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "LogOut";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(16, 532);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(109, 62);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
             // 
             // label4
             // 
@@ -202,25 +223,142 @@ namespace Health
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.DOBTb);
+            this.groupBox1.Controls.Add(this.GenCb);
+            this.groupBox1.Controls.Add(this.savebtn);
+            this.groupBox1.Controls.Add(this.beletebtn);
+            this.groupBox1.Controls.Add(this.editbtn);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.patAddTb);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.patphoneTb);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.patNameTP);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(174, 107);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1060, 340);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // savebtn
+            // 
+            this.savebtn.BackColor = System.Drawing.Color.OrangeRed;
+            this.savebtn.FlatAppearance.BorderSize = 0;
+            this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savebtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.savebtn.Location = new System.Drawing.Point(887, 208);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(148, 41);
+            this.savebtn.TabIndex = 17;
+            this.savebtn.Text = "Save";
+            this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
+            // 
+            // beletebtn
+            // 
+            this.beletebtn.BackColor = System.Drawing.Color.OrangeRed;
+            this.beletebtn.FlatAppearance.BorderSize = 0;
+            this.beletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.beletebtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.beletebtn.Location = new System.Drawing.Point(887, 271);
+            this.beletebtn.Name = "beletebtn";
+            this.beletebtn.Size = new System.Drawing.Size(148, 41);
+            this.beletebtn.TabIndex = 16;
+            this.beletebtn.Text = "Delete";
+            this.beletebtn.UseVisualStyleBackColor = false;
+            // 
+            // editbtn
+            // 
+            this.editbtn.BackColor = System.Drawing.Color.OrangeRed;
+            this.editbtn.FlatAppearance.BorderSize = 0;
+            this.editbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editbtn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.editbtn.Location = new System.Drawing.Point(887, 150);
+            this.editbtn.Name = "editbtn";
+            this.editbtn.Size = new System.Drawing.Size(148, 41);
+            this.editbtn.TabIndex = 15;
+            this.editbtn.Text = "Edit";
+            this.editbtn.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label12.Location = new System.Drawing.Point(601, 123);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(173, 32);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Patient Address";
+            // 
+            // patAddTb
+            // 
+            this.patAddTb.Location = new System.Drawing.Point(601, 169);
+            this.patAddTb.Multiline = true;
+            this.patAddTb.Name = "patAddTb";
+            this.patAddTb.Size = new System.Drawing.Size(254, 140);
+            this.patAddTb.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label9.Location = new System.Drawing.Point(334, 229);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(154, 32);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Patient Phone";
+            // 
+            // patphoneTb
+            // 
+            this.patphoneTb.Location = new System.Drawing.Point(334, 275);
+            this.patphoneTb.Name = "patphoneTb";
+            this.patphoneTb.Size = new System.Drawing.Size(213, 34);
+            this.patphoneTb.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label10.Location = new System.Drawing.Point(334, 123);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(225, 32);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Patient Data of other";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label8.Location = new System.Drawing.Point(36, 229);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(165, 32);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Patient Gender";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label7.Location = new System.Drawing.Point(36, 123);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(151, 32);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Patient Name";
+            // 
+            // patNameTP
+            // 
+            this.patNameTP.Location = new System.Drawing.Point(36, 169);
+            this.patNameTP.Name = "patNameTP";
+            this.patNameTP.Size = new System.Drawing.Size(213, 34);
+            this.patNameTP.TabIndex = 5;
             // 
             // label6
             // 
@@ -235,156 +373,15 @@ namespace Health
             this.label6.TabIndex = 4;
             this.label6.Text = "manage patients";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label7.Location = new System.Drawing.Point(36, 123);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 32);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Patient Name";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(36, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 34);
-            this.textBox1.TabIndex = 5;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label8.Location = new System.Drawing.Point(36, 229);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 32);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Patient Gender";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(36, 275);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 34);
-            this.textBox2.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label9.Location = new System.Drawing.Point(334, 229);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(154, 32);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Patient Phone";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(334, 275);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 34);
-            this.textBox3.TabIndex = 11;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label10.Location = new System.Drawing.Point(334, 123);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(225, 32);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Patient Data of other";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(334, 172);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(213, 34);
-            this.textBox4.TabIndex = 9;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label12.Location = new System.Drawing.Point(601, 123);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(173, 32);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Patient Address";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(601, 169);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(254, 140);
-            this.textBox6.TabIndex = 13;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(887, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 41);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.OrangeRed;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(887, 271);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 41);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.OrangeRed;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(887, 208);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 41);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.patientslist);
             this.panel2.Location = new System.Drawing.Point(174, 465);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1077, 278);
             this.panel2.TabIndex = 4;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1071, 227);
-            this.dataGridView1.TabIndex = 0;
             // 
             // label11
             // 
@@ -397,26 +394,39 @@ namespace Health
             this.label11.TabIndex = 7;
             this.label11.Text = "Patients  List";
             // 
-            // pictureBox6
+            // patientslist
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(16, 532);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(109, 62);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
+            this.patientslist.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.patientslist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.patientslist.Location = new System.Drawing.Point(3, 48);
+            this.patientslist.Name = "patientslist";
+            this.patientslist.RowHeadersWidth = 51;
+            this.patientslist.RowTemplate.Height = 29;
+            this.patientslist.Size = new System.Drawing.Size(1071, 227);
+            this.patientslist.TabIndex = 0;
             // 
-            // label13
+            // GenCb
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.label13.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label13.Location = new System.Drawing.Point(27, 608);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 28);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "LogOut";
+            this.GenCb.FormattingEnabled = true;
+            this.GenCb.Items.AddRange(new object[] {
+            "Male",
+            "Famale"});
+            this.GenCb.Location = new System.Drawing.Point(36, 276);
+            this.GenCb.Name = "GenCb";
+            this.GenCb.Size = new System.Drawing.Size(213, 36);
+            this.GenCb.TabIndex = 18;
+            // 
+            // DOBTb
+            // 
+            this.DOBTb.CalendarMonthBackground = System.Drawing.Color.Maroon;
+            this.DOBTb.CalendarTitleBackColor = System.Drawing.Color.DarkRed;
+            this.DOBTb.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DOBTb.Location = new System.Drawing.Point(334, 169);
+            this.DOBTb.MaxDate = new System.DateTime(2022, 11, 23, 0, 0, 0, 0);
+            this.DOBTb.Name = "DOBTb";
+            this.DOBTb.Size = new System.Drawing.Size(213, 34);
+            this.DOBTb.TabIndex = 19;
+            this.DOBTb.Value = new System.DateTime(2022, 11, 23, 0, 0, 0, 0);
             // 
             // patients
             // 
@@ -436,6 +446,7 @@ namespace Health
             this.Text = "patients";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -445,8 +456,7 @@ namespace Health
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientslist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,22 +478,22 @@ namespace Health
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox patAddTb;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox patphoneTb;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox patNameTP;
+        private System.Windows.Forms.Button savebtn;
+        private System.Windows.Forms.Button beletebtn;
+        private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView patientslist;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox GenCb;
+        private System.Windows.Forms.DateTimePicker DOBTb;
     }
 }
