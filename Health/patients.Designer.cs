@@ -30,20 +30,21 @@ namespace Health
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(patients));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DOBTb = new System.Windows.Forms.DateTimePicker();
+            this.GenCb = new System.Windows.Forms.ComboBox();
             this.savebtn = new System.Windows.Forms.Button();
             this.beletebtn = new System.Windows.Forms.Button();
             this.editbtn = new System.Windows.Forms.Button();
@@ -58,15 +59,11 @@ namespace Health
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.patientslist = new System.Windows.Forms.DataGridView();
-            this.GenCb = new System.Windows.Forms.ComboBox();
-            this.DOBTb = new System.Windows.Forms.DateTimePicker();
+            this.patientslist = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,12 +77,8 @@ namespace Health
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(2, 107);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(137, 672);
@@ -111,13 +104,14 @@ namespace Health
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.label4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label4.Location = new System.Drawing.Point(45, 208);
+            this.label4.Location = new System.Drawing.Point(38, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 28);
             this.label4.TabIndex = 9;
@@ -134,27 +128,6 @@ namespace Health
             this.label3.TabIndex = 8;
             this.label3.Text = "Diognosit";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label2.Location = new System.Drawing.Point(32, 449);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 28);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Dashba";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(-10, 365);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(165, 67);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
@@ -164,39 +137,18 @@ namespace Health
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-10, 135);
+            this.pictureBox3.Location = new System.Drawing.Point(-10, 44);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(156, 68);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label1.Location = new System.Drawing.Point(27, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "patients";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(132, 71);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox1
             // 
@@ -242,6 +194,29 @@ namespace Health
             this.groupBox1.Size = new System.Drawing.Size(1060, 340);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // DOBTb
+            // 
+            this.DOBTb.CalendarMonthBackground = System.Drawing.Color.Maroon;
+            this.DOBTb.CalendarTitleBackColor = System.Drawing.Color.DarkRed;
+            this.DOBTb.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DOBTb.Location = new System.Drawing.Point(334, 169);
+            this.DOBTb.MaxDate = new System.DateTime(2022, 11, 23, 0, 0, 0, 0);
+            this.DOBTb.Name = "DOBTb";
+            this.DOBTb.Size = new System.Drawing.Size(213, 34);
+            this.DOBTb.TabIndex = 35;
+            this.DOBTb.Value = new System.DateTime(2022, 11, 23, 0, 0, 0, 0);
+            // 
+            // GenCb
+            // 
+            this.GenCb.FormattingEnabled = true;
+            this.GenCb.Items.AddRange(new object[] {
+            "Male",
+            "Famale"});
+            this.GenCb.Location = new System.Drawing.Point(36, 276);
+            this.GenCb.Name = "GenCb";
+            this.GenCb.Size = new System.Drawing.Size(213, 36);
+            this.GenCb.TabIndex = 18;
             // 
             // savebtn
             // 
@@ -361,6 +336,7 @@ namespace Health
             this.patNameTP.Name = "patNameTP";
             this.patNameTP.Size = new System.Drawing.Size(213, 34);
             this.patNameTP.TabIndex = 5;
+            this.patNameTP.TextChanged += new System.EventHandler(this.patNameTP_TextChanged);
             // 
             // label6
             // 
@@ -378,8 +354,8 @@ namespace Health
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.patientslist);
+            this.panel2.Controls.Add(this.label11);
             this.panel2.Location = new System.Drawing.Point(174, 465);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1077, 278);
@@ -398,38 +374,55 @@ namespace Health
             // 
             // patientslist
             // 
-            this.patientslist.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.patientslist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.patientslist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.patientslist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.patientslist.Location = new System.Drawing.Point(3, 48);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.patientslist.DefaultCellStyle = dataGridViewCellStyle3;
+            this.patientslist.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.patientslist.Location = new System.Drawing.Point(0, 48);
             this.patientslist.Name = "patientslist";
+            this.patientslist.RowHeadersVisible = false;
             this.patientslist.RowHeadersWidth = 51;
             this.patientslist.RowTemplate.Height = 29;
-            this.patientslist.Size = new System.Drawing.Size(1071, 227);
-            this.patientslist.TabIndex = 0;
-            this.patientslist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientslist_CellContentClick);
-            // 
-            // GenCb
-            // 
-            this.GenCb.FormattingEnabled = true;
-            this.GenCb.Items.AddRange(new object[] {
-            "Male",
-            "Famale"});
-            this.GenCb.Location = new System.Drawing.Point(36, 276);
-            this.GenCb.Name = "GenCb";
-            this.GenCb.Size = new System.Drawing.Size(213, 36);
-            this.GenCb.TabIndex = 18;
-            // 
-            // DOBTb
-            // 
-            this.DOBTb.CalendarMonthBackground = System.Drawing.Color.Maroon;
-            this.DOBTb.CalendarTitleBackColor = System.Drawing.Color.DarkRed;
-            this.DOBTb.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DOBTb.Location = new System.Drawing.Point(334, 169);
-            this.DOBTb.MaxDate = new System.DateTime(2022, 11, 23, 0, 0, 0, 0);
-            this.DOBTb.Name = "DOBTb";
-            this.DOBTb.Size = new System.Drawing.Size(213, 34);
-            this.DOBTb.TabIndex = 35;
-            this.DOBTb.Value = new System.DateTime(2022, 11, 23, 0, 0, 0, 0);
+            this.patientslist.Size = new System.Drawing.Size(1074, 226);
+            this.patientslist.TabIndex = 8;
+            this.patientslist.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.patientslist.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.patientslist.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.patientslist.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.patientslist.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.patientslist.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.patientslist.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.patientslist.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.patientslist.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.patientslist.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.patientslist.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.patientslist.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.patientslist.ThemeStyle.HeaderStyle.Height = 4;
+            this.patientslist.ThemeStyle.ReadOnly = false;
+            this.patientslist.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.patientslist.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.patientslist.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.patientslist.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.patientslist.ThemeStyle.RowsStyle.Height = 29;
+            this.patientslist.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.patientslist.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.patientslist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientslist_CellContentClick_1);
             // 
             // patients
             // 
@@ -450,10 +443,8 @@ namespace Health
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -470,12 +461,8 @@ namespace Health
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -493,10 +480,10 @@ namespace Health
         private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView patientslist;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox GenCb;
         private System.Windows.Forms.DateTimePicker DOBTb;
+        private Guna.UI2.WinForms.Guna2DataGridView patientslist;
     }
 }

@@ -33,11 +33,11 @@ namespace Health
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.UserName = new System.Windows.Forms.TextBox();
+            this.user = new System.Windows.Forms.Label();
+            this.PasswordTb = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.Label();
+            this.loginBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,55 +72,56 @@ namespace Health
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // UserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(429, 297);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 27);
-            this.textBox1.TabIndex = 3;
+            this.UserName.Location = new System.Drawing.Point(429, 297);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(213, 27);
+            this.UserName.TabIndex = 3;
+            this.UserName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label2
+            // user
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(429, 251);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 32);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "User Name";
+            this.user.AutoSize = true;
+            this.user.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.user.ForeColor = System.Drawing.Color.OrangeRed;
+            this.user.Location = new System.Drawing.Point(429, 251);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(126, 32);
+            this.user.TabIndex = 4;
+            this.user.Text = "User Name";
             // 
-            // textBox3
+            // PasswordTb
             // 
-            this.textBox3.Location = new System.Drawing.Point(428, 402);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 27);
-            this.textBox3.TabIndex = 5;
+            this.PasswordTb.Location = new System.Drawing.Point(428, 402);
+            this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.Size = new System.Drawing.Size(213, 27);
+            this.PasswordTb.TabIndex = 5;
             // 
-            // label4
+            // password
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label4.Location = new System.Drawing.Point(428, 356);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 32);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Password";
+            this.password.AutoSize = true;
+            this.password.Font = new System.Drawing.Font("Sitka Subheading", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.password.ForeColor = System.Drawing.Color.OrangeRed;
+            this.password.Location = new System.Drawing.Point(428, 356);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(112, 32);
+            this.password.TabIndex = 6;
+            this.password.Text = "Password";
             // 
-            // button1
+            // loginBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(428, 445);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 50);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.loginBtn.BackColor = System.Drawing.Color.OrangeRed;
+            this.loginBtn.FlatAppearance.BorderSize = 0;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginBtn.Location = new System.Drawing.Point(428, 445);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(213, 50);
+            this.loginBtn.TabIndex = 7;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -140,11 +141,11 @@ namespace Health
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 552);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.PasswordTb);
+            this.Controls.Add(this.user);
+            this.Controls.Add(this.UserName);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -163,11 +164,11 @@ namespace Health
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox UserName;
+        private System.Windows.Forms.Label user;
+        private System.Windows.Forms.TextBox PasswordTb;
+        private System.Windows.Forms.Label password;
+        private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Label label3;
     }
 }

@@ -19,10 +19,29 @@ namespace Health
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (UserName.Text == "" || PasswordTb.Text == "")
+            {
+                MessageBox.Show("Missing Dateee!!!");
+            }
+            else if(UserName.Text == "Mohamed" || PasswordTb.Text == "Ebrahim")
+            {
+                patients Obj = new patients();
+                Obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                UserName.Text = "";
+                PasswordTb.Text = "";
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

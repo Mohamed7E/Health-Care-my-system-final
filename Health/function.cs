@@ -22,7 +22,7 @@ namespace Health
             Constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\fg\Documents\HealthCareDB.mdf;Integrated Security=True;Connect Timeout=30";
             con = new SqlConnection(Constr);
             cmd = new SqlCommand();
-            cmd.connection = con;
+            cmd.Connection = con;
         }
         public DataTable GetData(string Query)
         {

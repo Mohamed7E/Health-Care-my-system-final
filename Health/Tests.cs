@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Health
 {
@@ -20,7 +21,7 @@ namespace Health
         public void ShowTest()
         {
             string Query = "select *form TestTb";
-            Testlist.DataSource = Con..GetData(Query);
+            Testlist.DataSource = Con.GetData(Query);
         }
       private void Clear()
         {
@@ -30,7 +31,7 @@ namespace Health
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
-            if (TNameTb.Text == "" || TCostTb.Text = "")
+            if (TNameTb.Text == "" || TCostTb.Text == "")
             {
                 MessageBox.Show("Missing Data!!!!!!");
             }
@@ -50,25 +51,11 @@ namespace Health
 
         }
         int key = 0;
-        private void Testlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            TNameTb.Text = TNameTb.SelectedRows[0].Cells[1].Value.ToString();
-            
-          TCostTb.Text = TCostTb.SelectedRows[0].Cells[2].Value.ToString();
-            
-            if (TNameTb.Text == "")
-            {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(Testlist.SelectedRows[0].Cells[0].Value.ToString());
-            }
-        }
+       
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            if (TNameTb.Text == "" || TCostTb.Text = "")
+            if ( TNameTb.Text == "" || TCostTb.Text =="")
             {
                 MessageBox.Show("Missing Data!!!!!!");
             }
@@ -89,7 +76,7 @@ namespace Health
 
         private void DeleteBTn_Click(object sender, EventArgs e)
         {
-            if (key==0)
+            if (key == 0)
             {
                 MessageBox.Show("select aTest!!!!!!");
             }
@@ -99,11 +86,49 @@ namespace Health
                 int Cost = Convert.ToInt32(TCostTb.Text);
 
                 string Query = "Delete from TestTbl  where TestCode={}";
-                Query = string.Format(Query,  key);
+                Query = string.Format(Query, key);
                 Con.setData(Query);
                 ShowTest();
                 Clear();
                 MessageBox.Show("Test Deleteeee!!!");
             }
-    }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Form1 Obj = new Form1();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            patients Obj = new patients();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Disgnosis Obj = new Disgnosis();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TNameTb.Text = Testlist.SelectedRows[0].Cells[1].Value.ToString();
+
+            TCostTb.Text = Testlist.SelectedRows[0].Cells[2].Value.ToString();
+
+            if (TNameTb.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(Testlist.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+    };
 }

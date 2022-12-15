@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace Health
 {
     public partial class patients : Form
@@ -30,12 +30,12 @@ namespace Health
         public void Showpatients()
         {
             string Query = "select *form patientTb";
-            patientslist.DataSource = Con..GetData(Query);
+            patientslist.DataSource = Con.GetData(Query);
         }
 
         private void savebtn_Click(object sender, EventArgs e)
         {
-            if (patNameTP.Text == "" || patphoneTb.Text = "" || patAddTb.Text = "" || GenCb.SelectedIndex = "")
+            if (patNameTP.Text == "" || patphoneTb.Text == "" || patAddTb.Text == "" || GenCb.SelectedIndex ==-1)
             {
                 MessageBox.Show("Missing Data!!!!!!");
             }
@@ -59,25 +59,13 @@ namespace Health
 
         private void patientslist_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            patNameTP.Text = patientslist.SelectedRows[0].Cells[1].Value.ToString();
-           GenCb.SelectedItem = patientslist.SelectedRows[0].Cells[2].Value.ToString();
-            DOBTb.Text = patientslist.SelectedRows[0].Cells[3].Value.ToString();
-            patphoneTb.Text = patientslist.SelectedRows[0].Cells[4].Value.ToString();
-            patAddTb.Text = patientslist.SelectedRows[0].Cells[5].Value.ToString();
-            if (patNameTP.Text == "")
-            {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(patientslist.SelectedRows[0].Cells[0].Value.ToString());
-            }
+           
         }
 
         private void editbtn_Click(object sender, EventArgs e)
         {
 
-            if (patNameTP.Text == "" || patphoneTb.Text = "" || patAddTb.Text = "" || GenCb.SelectedIndex = "")
+            if (patNameTP.Text == ""||  patphoneTb.Text == "" || patAddTb.Text == "" || GenCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Data!!!!!!");
             }
@@ -124,6 +112,51 @@ namespace Health
 
             }
 
+        }
+
+        private void patNameTP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Form1 Obj = new Form1();
+            Obj.Show();
+            this.Hide();
+
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Tests Obj = new Tests();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Disgnosis Obj = new Disgnosis();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void patientslist_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            patNameTP.Text = patientslist.SelectedRows[0].Cells[1].Value.ToString();
+            GenCb.SelectedItem = patientslist.SelectedRows[0].Cells[2].Value.ToString();
+            DOBTb.Text = patientslist.SelectedRows[0].Cells[3].Value.ToString();
+            patphoneTb.Text = patientslist.SelectedRows[0].Cells[4].Value.ToString();
+            patAddTb.Text = patientslist.SelectedRows[0].Cells[5].Value.ToString();
+            if (patNameTP.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(patientslist.SelectedRows[0].Cells[0].Value.ToString());
+            }
         }
     }
 }
